@@ -40,10 +40,10 @@ function concertThis(artist) {
         }
         let venue = response.data[0].venue.name;
         let venueLocation = response.data[0].venue.name;
-        console.log("Name of the venue:", venue);
-        console.log("Venue location:", venueLocation);
+        console.log("Venue Name:", venue);
+        console.log("Location:", venueLocation);
         let eventDate = moment(response.data[0].datetime).format('MM/DD/YYYY');
-        console.log("Date of the Event:", eventDate);
+        console.log("Event Date:", eventDate);
         fs.appendFileSync("log.txt", "Artist: " + artist + "\nVenue Name: " + venue + "\nVenue Location: " + venueLocation + "\nEvent Date: " + eventDate + "\n----------------\n", function (error) {
           if (error) {
               console.log(error);
