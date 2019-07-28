@@ -1,4 +1,4 @@
-console.log('this is loaded');
+console.log('Loaded');
 
 exports.omdb = {
   api_key: process.env.OMDB_API_KEY
